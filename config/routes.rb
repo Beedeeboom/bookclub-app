@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get 'book_list', to: 'book_lists#index'
   get 'books/new'
   post 'books', to: 'books#create'
 
