@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  def index
+    @books = Book.all
+  end
   def new
     @authors = Author.all
     @genres = Genre.all
