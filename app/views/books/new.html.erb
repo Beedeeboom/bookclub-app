@@ -7,23 +7,11 @@
     </div>
     <div>
         <%= f.label :author %>
-        <%= f.select :author, options_for_select([
-            ["Please select..."], 
-            ["JK Rowling", 2], 
-            ["Brandon Sanderson", 3], 
-            ["Stephen King", 4], 
-            ["JRR Tolkien", 5]
-            ]) %>
+        <%= f.collection_select(:author_id, @authors, :id, :full_name) %>
     </div>
     <div>
-        <%= f.label :genre %>
-        <%= f.select :genre, options_for_select([
-            ["Please select..."],
-            ["Fantasy", 1],
-            ["Thriller", 2],
-            ["Science Fiction", 3],
-            ["Action", 4]
-            ]) %>
+        <%= f.label :genres %>
+        <%= f.collection_check_boxes(:genre_ids, @genres, :id, :name) %>
     </div>
     <div>
         <%= f.submit %>
