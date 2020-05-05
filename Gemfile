@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'hirb'
 gem "devise", "~> 4.7"
+gem "rolify", "~> 5.2"
